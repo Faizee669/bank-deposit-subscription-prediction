@@ -43,7 +43,4 @@ This project is part of the Kaggle Playground Series 2025.
 
 ---
 
-## License
-
-Specify your license here (e.g., MIT License).
 
