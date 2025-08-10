@@ -1,64 +1,49 @@
-<<<<<<< HEAD
-# bank-deposit-subscription-prediction
-=======
-# 🏡 XGBoost House Price Prediction
+# Bank Term Deposit Prediction
 
-This repository contains a machine learning solution to predict house prices using the XGBoost regression model. The project is based on the [Kaggle House Prices - Advanced Regression Techniques](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques) competition dataset.
+This repository contains a machine learning project for predicting whether a client will subscribe to a bank term deposit. The goal is to build a binary classification model using the **Playground Series S5E8: Bank Term Deposit Prediction** dataset.
 
----
+## Project Overview
 
+- **Objective:** Predict client subscription (`y = 1` or `0`) to a bank's term deposit.
+- **Evaluation Metric:** ROC AUC (Area Under the Receiver Operating Characteristic Curve)
+- **Model:** LightGBM gradient boosting machine with stratified 5-fold cross-validation.
+- **Features:** Demographic, campaign-related data along with engineered features for improved performance.
 
----
+## Pipeline Steps
 
-## 🚀 What This Project Covers
+1. Load and inspect the data  
+2. Exploratory Data Analysis (EDA)  
+3. Handle missing values and encode categorical variables  
+4. Feature engineering including interaction terms and transformed variables  
+5. Train LightGBM model with hyperparameter tuning and early stopping  
+6. Generate out-of-fold predictions and final test predictions  
+7. Export submission file for competition
 
-- Exploratory Data Analysis (EDA)
-- Handling missing values
-- Feature encoding and transformation
-- Hyperparameter tuning using RandomizedSearchCV
-- Training an XGBoost Regressor
-- Evaluation using RMSE and R² metrics
-- Generating submission file for Kaggle
+## Usage
 
----
+To run the project:
 
-## 📊 Model Used
+1. Ensure you have Python 3 and required packages installed (`pandas`, `numpy`, `seaborn`, `matplotlib`, `scikit-learn`, `lightgbm`).
+2. Place the dataset CSV files (`train.csv`, `test.csv`) in the appropriate directory.
+3. Run the notebook or script to reproduce training, evaluation, and prediction.
 
-We use [XGBoost](https://xgboost.readthedocs.io/en/stable/) — a scalable and accurate gradient boosting machine learning algorithm.
+## Repository Structure
 
-### Tuned Hyperparameters:
-- `n_estimators`
-- `learning_rate`
-- `max_depth`
-- `subsample`
-- `colsample_bytree`
+- `lightgbm-with-cross-validation.ipynb`: The main analysis and modeling notebook.
+- `train.csv` and `test.csv`: Input datasets (not included due to size/license).
+- `submission.csv`: Sample output prediction file after model inference.
 
-RandomizedSearchCV was used for efficient hyperparameter tuning.
+## Contacts & Links
 
----
-
-## 📈 Performance
-
-- **Test RMSE**: ~24802.49  
-- **Test R²**: 0.9198
-
-These scores indicate a strong fit for predicting house prices.
+Feel free to open issues or submit pull requests for improvements or questions.
 
 ---
 
-## 📦 Requirements
+This project is part of the Kaggle Playground Series 2025.
 
-Install required libraries using pip:
+---
 
-```bash
-pip install xgboost scikit-learn pandas matplotlib numpy
+## License
 
-## 🧠 How to Run
+Specify your license here (e.g., MIT License).
 
-### Clone the repository:
-
-```bash
-git clone https://github.com/Faizee669/xgboost-price-prediction.git
-cd xgboost-price-prediction
-
->>>>>>> 3ffa5373c4ce3f157454de682320908890ed3864
